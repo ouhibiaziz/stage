@@ -1,0 +1,38 @@
+{"instruction": "What is the Admin Body in the category of Legal Framework?", "output": "General Directorate of Taxes (DGI) under Ministry of Finance (Rate/Value: N/A, Effective Date: N/A, Source: lucapacioli.com.tn)"}
+{"instruction": "What is the Key Laws in the category of Legal Framework?", "output": "Income Tax Code, VAT Law, Tax Procedures Code, Investment Code (Rate/Value: N/A, Effective Date: N/A, Source: tobias-nielsen.com)"}
+{"instruction": "What is the Standard Rate in the category of Corporate Income Tax?", "output": "CIT raised from 15% to 20% (Rate/Value: 20%, Effective Date: 2024-01-01, Source: lucapacioli.com.tn)"}
+{"instruction": "What is the High-Tax Sector Rate in the category of Corporate Income Tax?", "output": "Banks, insurance, financial institutions (Rate/Value: 40%, Effective Date: 2024-01-01, Source: investmentpolicy.unctad.org)"}
+{"instruction": "What is the Reduced Rates in the category of Corporate Income Tax?", "output": "SMEs, agriculture, crafts, free-zones (Rate/Value: 10%, Effective Date: Ongoing, Source: PwC Tax Summaries)"}
+{"instruction": "What is the Minimum Tax in the category of Corporate Income Tax?", "output": "If CIT is below threshold, applies to turnover (Rate/Value: 0.2% (or 0.1% for 10% companies), Effective Date: Ongoing, Source: tobias-nielsen.com)"}
+{"instruction": "What is the Minimum Tax - Floor in the category of Corporate Income Tax?", "output": "Minimum floor for CIT (Rate/Value: TND 500 or TND 300, Effective Date: Ongoing, Source: tobias-nielsen.com)"}
+{"instruction": "What is the Conjunctural Contribution in the category of Corporate Income Tax?", "output": "Surcharge for large companies (≥ TND 20M turnover) (Rate/Value: 2% (min TND 1,000), Effective Date: 2024-01-01, Source: lucapacioli.com.tn)"}
+{"instruction": "What is the New Investment Exemption in the category of Incentives?", "output": "CIT and PIT exemption for 4 years for firms starting 2024–2025 (Rate/Value: N/A, Effective Date: 2024-01-01, Source: investmentpolicy.unctad.org)"}
+{"instruction": "What is the Export Companies in the category of Incentives?", "output": "Customs/VAT exemptions, stamp duty relief (Rate/Value: N/A, Effective Date: Ongoing, Source: tobias-nielsen.com)"}
+{"instruction": "What is the PIT Bracket 1 in the category of Personal Income Tax?", "output": "0 – 5,000 TND (Rate/Value: 0% + SSC 0% / 0.5%, Effective Date: 2025-01-01, Source: PwC Tax Summaries)"}
+{"instruction": "What is the PIT Bracket 2 in the category of Personal Income Tax?", "output": "5,001 – 20,000 TND (Rate/Value: 26% + SSC 0.5%, Effective Date: 2025-01-01, Source: PwC Tax Summaries)"}
+{"instruction": "What is the PIT Bracket 3 in the category of Personal Income Tax?", "output": "20,001 – 30,000 TND (Rate/Value: 28% + SSC 0.5%, Effective Date: 2025-01-01, Source: PwC Tax Summaries)"}
+{"instruction": "What is the PIT Bracket 4 in the category of Personal Income Tax?", "output": "30,001 – 50,000 TND (Rate/Value: 32% + SSC 0.5%, Effective Date: 2025-01-01, Source: PwC Tax Summaries)"}
+{"instruction": "What is the PIT Bracket 5 in the category of Personal Income Tax?", "output": "50,001+ TND (Rate/Value: 35% + SSC 0.5%, Effective Date: 2025-01-01, Source: PwC Tax Summaries)"}
+{"instruction": "What is the SSC Reduction in the category of Personal Income Tax?", "output": "Social Solidarity Contribution reduction (Rate/Value: 0.5%, Effective Date: 2023-01-01 to 2025-12-31, Source: payspace.com)"}
+{"instruction": "What is the Flat PIT in the category of Non-Resident Tax?", "output": "Flat tax on gross income (Rate/Value: 20%, Effective Date: Ongoing, Source: PwC Tax Summaries)"}
+{"instruction": "What is the Employer Share in the category of Social Security?", "output": "Employer contribution (Rate/Value: 16.57%, Effective Date: Ongoing, Source: tobias-nielsen.com)"}
+{"instruction": "What is the Employee Share in the category of Social Security?", "output": "Employee contribution (Rate/Value: 9.18%, Effective Date: Ongoing, Source: tobias-nielsen.com)"}
+{"instruction": "What is the Export Firm Reduction in the category of Social Security?", "output": "Employer reduced rate for exporters (Rate/Value: 0.5%, Effective Date: Ongoing, Source: tobias-nielsen.com)"}
+{"instruction": "What is the Real Estate CGT > 5 years in the category of Capital Gains?", "output": "Tax if held > 5 years (Rate/Value: 10%, Effective Date: Ongoing, Source: PwC Tax Summaries)"}
+{"instruction": "What is the Real Estate CGT < 5 years in the category of Capital Gains?", "output": "Tax if sold before 5 years (Rate/Value: 15%, Effective Date: Ongoing, Source: PwC Tax Summaries)"}
+{"instruction": "What is the Real Estate Threshold in the category of Wealth Tax?", "output": "Applies if real estate ≥ TND 3 million (Rate/Value: N/A, Effective Date: Ongoing, Source: tradeclub.standardbank.com)"}
+{"instruction": "What is the Standard Rate in the category of VAT?", "output": "Most goods and services (Rate/Value: 19%, Effective Date: Ongoing, Source: tradeclub.standardbank.com)"}
+{"instruction": "What is the Reduced Rate 1 in the category of VAT?", "output": "Certain goods (e.g. pharma, hotels) (Rate/Value: 13%, Effective Date: Ongoing, Source: tradeclub.standardbank.com)"}
+{"instruction": "What is the Reduced Rate 2 in the category of VAT?", "output": "Essentials (e.g. food) (Rate/Value: 7%, Effective Date: Ongoing, Source: tradeclub.standardbank.com)"}
+{"instruction": "What is the Zero-Rated in the category of VAT?", "output": "Exports (Rate/Value: 0%, Effective Date: Ongoing, Source: tradeclub.standardbank.com)"}
+{"instruction": "What is the Exemptions in the category of VAT?", "output": "Health, education, etc. (Rate/Value: Exempt, Effective Date: Ongoing, Source: tradeclub.standardbank.com)"}
+{"instruction": "What is the Professional Services Now Taxed in the category of VAT?", "output": "Legal/accounting/cosmetic now taxed at 19% (Rate/Value: 19%, Effective Date: 2023-01-01, Source: news.bloombergtax.com)"}
+{"instruction": "What is the Dividends in the category of Withholding Taxes?", "output": "Tax on dividends to non-residents (Rate/Value: 10%, Effective Date: Ongoing, Source: tobias-nielsen.com)"}
+{"instruction": "What is the Interest in the category of Withholding Taxes?", "output": "Varies by entity (Rate/Value: 20–35%, Effective Date: Ongoing, Source: tobias-nielsen.com)"}
+{"instruction": "What is the Royalties in the category of Withholding Taxes?", "output": "Subject to DTA adjustments (Rate/Value: ~15%, Effective Date: Ongoing, Source: tobias-nielsen.com)"}
+{"instruction": "What is the Stamp Duty in the category of Other Taxes?", "output": "Real estate/property transactions (Rate/Value: Up to 10%, Effective Date: Ongoing, Source: ECOVIS International)"}
+{"instruction": "What is the Local Tax in the category of Other Taxes?", "output": "Household waste tax (“zebla”) (Rate/Value: 0.05% (≥ TND 3M property), Effective Date: Ongoing, Source: Reddit)"}
+{"instruction": "What is the Tourist Tax in the category of Other Taxes?", "output": "Visitors 12+, hotel stays (Rate/Value: 4–12 TND/night (max 10 nights), Effective Date: 2024-11-01, Source: thesun.co.uk)"}
+{"instruction": "What is the Corporate Tax Reform in the category of Effective Dates?", "output": "20% CIT effective date (Rate/Value: N/A, Effective Date: 2024-01-01, Source: lucapacioli.com.tn)"}
+{"instruction": "What is the PIT Reform in the category of Effective Dates?", "output": "New brackets and SSC reduction (Rate/Value: N/A, Effective Date: 2025-01-01, Source: payspace.com)"}
+{"instruction": "What is the Tourist Tax Start in the category of Effective Dates?", "output": "New tourist tax takes effect (Rate/Value: N/A, Effective Date: 2024-11-01, Source: thesun.co.uk)"}
