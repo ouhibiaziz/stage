@@ -19,35 +19,61 @@ const SignUpScreen = () => {
   const navigation = useNavigation();
 
   const handleSignUp = async () => {
+    console.log('Sign Up button pressed');
+    // Basic client-side validation to reduce 400 errors from backend
+    const isEmailValid = /^\S+@\S+\.\S+$/.test(email);
+    if (!username || username.length < 3) {
+      console.log('Validation failed: Username is too short.');
+      Alert.alert('Error', 'Username must be at least 3 characters.');
+      return;
+    }
+    if (!isEmailValid) {
+      console.log('Validation failed: Email is invalid.');
+      Alert.alert('Error', 'Please enter a valid email address.');
+      return;
+    }
+    if (!password || password.length < 6) {
+      console.log('Validation failed: Password is too short.');
+      Alert.alert('Error', 'Password must be at least 6 characters.');
+      return;
+    }
     if (password !== confirmPassword) {
+      console.log('Validation failed: Passwords do not match.');
       Alert.alert('Error', 'Passwords do not match');
       return;
     }
     console.log('Attempting registration with:', { username, email, password });
     setLoading(true);
     try {
-      const userData = { username, email, password };
+      // Include both username and name to satisfy common Spring DTOs
+      const payload = { username, name: username, email, password };
       console.log('Sending registration request...');
-      const response = await registerUser(userData);
-      console.log('Registration response:', {
-        status: response.status,
-        headers: response.headers,
-        data: response.data
-      });
-      Alert.alert('Success', response.data?.message || 'Registration successful', [
+      const data = await registerUser(payload); // registerUser returns response.data
+      console.log('Registration response data:', data);
+      Alert.alert('Success', data?.message || 'Registration successful', [
         { text: 'OK', onPress: () => navigation.navigate('Login') }
       ]);
     } catch (error) {
+      const data = error?.response?.data;
+      // Construct a helpful message from typical Spring validation formats
+      let message =
+        data?.message ||
+        (Array.isArray(data?.errors)
+          ? data.errors
+              .map(e => e.defaultMessage || e.message || (e.field ? `${e.field}: ${e.error}` : String(e)))
+              .join('\n')
+          : (data && typeof data === 'object')
+            ? Object.values(data).flat().join('\n')
+            : null) ||
+        error.message ||
+        'Registration failed. Please try again.';
       console.error('Registration error details:', {
         message: error.message,
         response: error.response,
+        data,
         config: error.config
       });
-      Alert.alert('Error', 
-        error.response?.data?.message || 
-        error.message || 
-        'Registration failed. Please try again.'
-      );
+      Alert.alert('Error', message);
     } finally {
       setLoading(false);
     }
@@ -55,31 +81,7 @@ const SignUpScreen = () => {
 
   return (
     <LinearGradient colors={['#3b5998', '#192f6a']} style={styles.container}>
-      {/* TEST BUTTON */}
-      <TouchableOpacity 
-        onPress={() => console.log('TEST BUTTON PRESSED')}
-        style={{padding: 20, backgroundColor: 'red'}}
-      >
-        <Text style={{color: 'white'}}>TEST BUTTON</Text>
-      </TouchableOpacity>
-      
-      {/* TEST CONNECTIVITY BUTTON */}
-      <TouchableOpacity 
-        onPress={async () => {
-          try {
-            console.log('Testing backend connectivity...');
-            const response = await api.get('/test/connectivity');
-            console.log('Connectivity test response:', response.data);
-            Alert.alert('Success', 'Backend connection successful!');
-          } catch (error) {
-            console.error('Connectivity test failed:', error);
-            Alert.alert('Error', 'Failed to connect to backend');
-          }
-        }}
-        style={{padding: 20, backgroundColor: 'green', marginTop: 20}}
-      >
-        <Text style={{color: 'white'}}>Test Backend Connection</Text>
-      </TouchableOpacity>
+
       
       <Text style={styles.title}>Create Account</Text>
       <View style={styles.inputContainer}>

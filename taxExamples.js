@@ -61,7 +61,7 @@ export const taxExamples = [
   },
   {
     "role": "assistant",
-    "content": "Surcharge for large companies (\u2265 TND 20M turnover) (Rate/Value: 2% (min TND 1,000), Effective Date: 2024-01-01, Source: lucapacioli.com.tn)"
+    "content": "Surcharge for large companies (≥ TND 20M turnover) (Rate/Value: 2% (min TND 1,000), Effective Date: 2024-01-01, Source: lucapacioli.com.tn)"
   },
   {
     "role": "user",
@@ -69,7 +69,7 @@ export const taxExamples = [
   },
   {
     "role": "assistant",
-    "content": "CIT and PIT exemption for 4 years for firms starting 2024\u20132025 (Rate/Value: N/A, Effective Date: 2024-01-01, Source: investmentpolicy.unctad.org)"
+    "content": "CIT and PIT exemption for 4 years for firms starting 2024–2025 (Rate/Value: N/A, Effective Date: 2024-01-01, Source: investmentpolicy.unctad.org)"
   },
   {
     "role": "user",
@@ -85,7 +85,7 @@ export const taxExamples = [
   },
   {
     "role": "assistant",
-    "content": "0 \u2013 5,000 TND (Rate/Value: 0% + SSC 0% / 0.5%, Effective Date: 2025-01-01, Source: PwC Tax Summaries)"
+    "content": "0 – 5,000 TND (Rate/Value: 0% + SSC 0% / 0.5%, Effective Date: 2025-01-01, Source: PwC Tax Summaries)"
   },
   {
     "role": "user",
@@ -93,7 +93,7 @@ export const taxExamples = [
   },
   {
     "role": "assistant",
-    "content": "5,001 \u2013 20,000 TND (Rate/Value: 26% + SSC 0.5%, Effective Date: 2025-01-01, Source: PwC Tax Summaries)"
+    "content": "5,001 – 20,000 TND (Rate/Value: 26% + SSC 0.5%, Effective Date: 2025-01-01, Source: PwC Tax Summaries)"
   },
   {
     "role": "user",
@@ -101,7 +101,7 @@ export const taxExamples = [
   },
   {
     "role": "assistant",
-    "content": "20,001 \u2013 30,000 TND (Rate/Value: 28% + SSC 0.5%, Effective Date: 2025-01-01, Source: PwC Tax Summaries)"
+    "content": "20,001 – 30,000 TND (Rate/Value: 28% + SSC 0.5%, Effective Date: 2025-01-01, Source: PwC Tax Summaries)"
   },
   {
     "role": "user",
@@ -109,7 +109,7 @@ export const taxExamples = [
   },
   {
     "role": "assistant",
-    "content": "30,001 \u2013 50,000 TND (Rate/Value: 32% + SSC 0.5%, Effective Date: 2025-01-01, Source: PwC Tax Summaries)"
+    "content": "30,001 – 50,000 TND (Rate/Value: 32% + SSC 0.5%, Effective Date: 2025-01-01, Source: PwC Tax Summaries)"
   },
   {
     "role": "user",
@@ -181,7 +181,7 @@ export const taxExamples = [
   },
   {
     "role": "assistant",
-    "content": "Applies if real estate \u2265 TND 3 million (Rate/Value: N/A, Effective Date: Ongoing, Source: tradeclub.standardbank.com)"
+    "content": "Applies if real estate ≥ TND 3 million (Rate/Value: N/A, Effective Date: Ongoing, Source: tradeclub.standardbank.com)"
   },
   {
     "role": "user",
@@ -245,7 +245,7 @@ export const taxExamples = [
   },
   {
     "role": "assistant",
-    "content": "Varies by entity (Rate/Value: 20\u201335%, Effective Date: Ongoing, Source: tobias-nielsen.com)"
+    "content": "Varies by entity (Rate/Value: 20–35%, Effective Date: Ongoing, Source: tobias-nielsen.com)"
   },
   {
     "role": "user",
@@ -269,7 +269,7 @@ export const taxExamples = [
   },
   {
     "role": "assistant",
-    "content": "Household waste tax (\u201czebla\u201d) (Rate/Value: 0.05% (\u2265 TND 3M property), Effective Date: Ongoing, Source: Reddit)"
+    "content": "Household waste tax (“zebla”) (Rate/Value: 0.05% (≥ TND 3M property), Effective Date: Ongoing, Source: Reddit)"
   },
   {
     "role": "user",
@@ -277,7 +277,7 @@ export const taxExamples = [
   },
   {
     "role": "assistant",
-    "content": "Visitors 12+, hotel stays (Rate/Value: 4\u201312 TND/night (max 10 nights), Effective Date: 2024-11-01, Source: thesun.co.uk)"
+    "content": "Visitors 12+, hotel stays (Rate/Value: 4–12 TND/night (max 10 nights), Effective Date: 2024-11-01, Source: thesun.co.uk)"
   },
   {
     "role": "user",
@@ -302,5 +302,125 @@ export const taxExamples = [
   {
     "role": "assistant",
     "content": "New tourist tax takes effect (Rate/Value: N/A, Effective Date: 2024-11-01, Source: thesun.co.uk)"
+  },
+  {
+    "role": "user",
+    "content": "What is the Tax Management System in the category of Tax Administration?"
+  },
+  {
+    "role": "assistant",
+    "content": "JIBAYA - Comprehensive tax management system for the General Directorate of Taxes (DGI) (Rate/Value: N/A, Effective Date: N/A, Source: www.arabsoft.com.tn)"
+  },
+  {
+    "role": "user",
+    "content": "What is the Taxpayer Dossier Management in the category of Tax Administration?"
+  },
+  {
+    "role": "assistant",
+    "content": "Handles immatriculation, obligations, declarations, controls, and appeals for taxpayers (Rate/Value: N/A, Effective Date: N/A, Source: www.arabsoft.com.tn)"
+  },
+  {
+    "role": "user",
+    "content": "What is the Taxpayer Identification in the category of Tax Administration?"
+  },
+  {
+    "role": "assistant",
+    "content": "National Identification Fiscal Number (NIF) assigned to taxpayers (Rate/Value: N/A, Effective Date: N/A, Source: www.arabsoft.com.tn)"
+  },
+  {
+    "role": "user",
+    "content": "What is the Electronic Document Management in the category of Tax Administration?"
+  },
+  {
+    "role": "assistant",
+    "content": "Integrated GED module for digitizing and managing taxpayer documents (Rate/Value: N/A, Effective Date: N/A, Source: www.arabsoft.com.tn)"
+  },
+  {
+    "role": "user",
+    "content": "What is the Tax Control and Cross-Checking in the category of Tax Administration?"
+  },
+  {
+    "role": "assistant",
+    "content": "Automated data analysis and cross-checking from multiple sources (Rate/Value: N/A, Effective Date: N/A, Source: www.arabsoft.com.tn)"
+  },
+  {
+    "role": "user",
+    "content": "What is the Default Taxation in the category of Tax Administration?"
+  },
+  {
+    "role": "assistant",
+    "content": "Automatic taxation for non-compliant taxpayers with penalty calculations (Rate/Value: N/A, Effective Date: N/A, Source: www.arabsoft.com.tn)"
+  },
+  {
+    "role": "user",
+    "content": "What is the Appeals Management in the category of Tax Administration?"
+  },
+  {
+    "role": "assistant",
+    "content": "Handles both gracious and contentious appeals with full process tracking (Rate/Value: N/A, Effective Date: N/A, Source: www.arabsoft.com.tn)"
+  },
+  {
+    "role": "user",
+    "content": "What is the System Interfaces in the category of Tax Administration?"
+  },
+  {
+    "role": "assistant",
+    "content": "Integration with Customs, Treasury, Budget, Transport, Civil Status, and other government systems (Rate/Value: N/A, Effective Date: N/A, Source: www.arabsoft.com.tn)"
+  },
+  {
+    "role": "user",
+    "content": "What is the Dashboard and Statistics in the category of Tax Administration?"
+  },
+  {
+    "role": "assistant",
+    "content": "Real-time performance indicators and customizable reporting tools (Rate/Value: N/A, Effective Date: N/A, Source: www.arabsoft.com.tn)"
+  },
+  {
+    "role": "user",
+    "content": "What is the Security Features in the category of Tax Administration?"
+  },
+  {
+    "role": "assistant",
+    "content": "Role-based access control, operation logging, and encrypted data transmission (Rate/Value: N/A, Effective Date: N/A, Source: www.arabsoft.com.tn)"
+  },
+  {
+    "role": "user",
+    "content": "What is the Motor Vehicle Taxes in the category of Tax Administration?"
+  },
+  {
+    "role": "assistant",
+    "content": "Specialized module for vehicle taxation based on usage type and characteristics (Rate/Value: N/A, Effective Date: N/A, Source: www.arabsoft.com.tn)"
+  },
+  {
+    "role": "user",
+    "content": "What is the Tax Collection Methods in the category of Tax Administration?"
+  },
+  {
+    "role": "assistant",
+    "content": "Includes spontaneous payments, constrained recovery, and payment agreements (Rate/Value: N/A, Effective Date: N/A, Source: www.arabsoft.com.tn)"
+  },
+  {
+    "role": "user",
+    "content": "What is the Taxpayer Service Features in the category of Tax Administration?"
+  },
+  {
+    "role": "assistant",
+    "content": "Online declaration, payment capabilities, and real-time tax situation updates (Rate/Value: N/A, Effective Date: N/A, Source: www.arabsoft.com.tn)"
+  },
+  {
+    "role": "user",
+    "content": "What is the System Parameterization in the category of Tax Administration?"
+  },
+  {
+    "role": "assistant",
+    "content": "Flexible configuration of taxes, workflows, and organizational structures (Rate/Value: N/A, Effective Date: N/A, Source: www.arabsoft.com.tn)"
+  },
+  {
+    "role": "user",
+    "content": "What is the Tax Types Supported in the category of Tax Administration?"
+  },
+  {
+    "role": "assistant",
+    "content": "VAT, ITS, TOF, TADE, IRCM, IMF, IRF, TA, TV, Patente, DAS, BIC, BNC, IGR (Rate/Value: N/A, Effective Date: N/A, Source: www.arabsoft.com.tn)"
   }
 ];

@@ -1,8 +1,7 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useContext } from 'react';
 import { View, Text, StyleSheet, TouchableOpacity, Alert, TextInput, Pressable, Keyboard, Platform } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
-import { loginUser } from './apiService';
-import { storeToken } from './utils/auth';
+import { AuthContext } from './utils/AuthContext';
 
 const localIP = '192.168.1.190'; // User's local IP address for Wi-Fi connection
 const apiUrl = Platform.OS === 'android' ? 'http://10.0.2.2:8081/api/auth' : `http://${localIP}:8081/api/auth`;
@@ -15,25 +14,20 @@ export default function LoginScreen({ navigation }) {
   const [emailFocused, setEmailFocused] = useState(false);
   const [passwordFocused, setPasswordFocused] = useState(false);
 
+  const { login } = useContext(AuthContext);
+
   const onSubmit = async () => {
     Keyboard.dismiss();
     setLoading(true);
     try {
-      const data = await loginUser(email, password);
-      if (!data.token) {
-        throw new Error('No authentication token received');
+      const result = await login(email, password);
+      if (!result.success) {
+        throw new Error(result.error || 'Login failed');
       }
-      await storeToken(data.token);
-      navigation.reset({ index: 0, routes: [{ name: 'Home' }] });
+      // Navigation is now handled automatically by the AuthContext state change
     } catch (error) {
       console.error('Full login error:', error);
-      let message = 'Login failed. Please try again.';
-      if (error.response?.data?.error) {
-        message = error.response.data.error;
-      } else if (error.message) {
-        message = error.message;
-      }
-      Alert.alert('Error', message);
+      Alert.alert('Error', error.message || 'Login failed. Please try again.');
     } finally {
       setLoading(false);
     }
@@ -109,7 +103,7 @@ export default function LoginScreen({ navigation }) {
               styles.signUpButton,
               pressed && styles.signUpButtonPressed
             ]}
-            onPress={() => navigation.navigate('SignUp')}
+            onPress={() => navigation.navigate('SignUpScreen')}
           >
             <Text style={styles.signUpButtonText}>Don't have an account? Sign Up</Text>
           </Pressable>

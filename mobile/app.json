@@ -24,6 +24,9 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "OPENROUTER_API_KEY": "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"
     }
   }
 }

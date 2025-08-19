@@ -1,6 +1,6 @@
 import { Platform } from 'react-native';
 import axios from 'axios';
-import AsyncStorage from '@react-native-async-storage/async-storage';
+import { getToken, getTokenScheme } from './utils/auth';
 
 // Configuration for different environments
 const getApiBaseUrl = () => {
@@ -40,10 +40,17 @@ api.interceptors.request.use(config => {
 // Request interceptor to add token
 api.interceptors.request.use(async (config) => {
   try {
-    const token = await AsyncStorage.getItem('token');
+    const token = await getToken();
+    const scheme = (await getTokenScheme()) || 'Bearer';
     if (token) {
-      config.headers.Authorization = `Bearer ${token}`;
+      config.headers.Authorization = `${scheme} ${token}`;
     }
+    // Log sanitized Authorization header after it is set
+    try {
+      const auth = config.headers.Authorization;
+      const preview = auth ? `${auth.split(' ')[0]} ${(auth.split(' ')[1] || '').slice(0, 8)}...` : 'none';
+      console.log('Auth header:', preview, '->', (config.method || 'GET').toUpperCase(), config.baseURL + config.url);
+    } catch {}
     return config;
   } catch (error) {
     console.error('Token retrieval error:', error);
@@ -73,28 +80,6 @@ export const fetchHello = async () => {
     return response.data;
   } catch (error) {
     throw handleApiError(error, 'fetchHello');
-  }
-};
-
-export const registerUser = async (userData) => {
-  try {
-    const response = await api.post('/auth/register', userData);
-    return response.data;
-  } catch (error) {
-    console.error('Registration failed:', error);
-    throw error;
-  }
-};
-
-export const loginUser = async (email, password) => {
-  try {
-    const response = await api.post('/auth/login', { email, password });
-    if (response.data.token) {
-      await AsyncStorage.setItem('token', response.data.token);
-    }
-    return response.data;
-  } catch (error) {
-    throw handleApiError(error, 'loginUser');
   }
 };
 

@@ -4,6 +4,7 @@ import com.example.demo.model.User;
 import com.example.demo.service.UserService;
 import com.example.demo.util.JwtUtil;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
@@ -105,5 +106,29 @@ public class AuthController {
             errorResponse.put("error", "Login failed");
             return ResponseEntity.status(401).body(errorResponse);
         }
+    }
+
+    @GetMapping("/status")
+    public ResponseEntity<?> getUserStatus() {
+        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+        if (authentication == null || !authentication.isAuthenticated() || authentication.getPrincipal().equals("anonymousUser")) {
+            return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(Map.of("error", "User not authenticated"));
+        }
+        
+        UserDetails userDetails = (UserDetails) authentication.getPrincipal();
+        User user = userService.findByUsername(userDetails.getUsername()).orElse(null);
+
+        if (user == null) {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(Map.of("error", "User not found"));
+        }
+
+        return ResponseEntity.ok(user);
+    }
+
+    @PostMapping("/logout")
+    public ResponseEntity<?> logoutUser() {
+        // For stateless JWT, server-side logout can be minimal.
+        // The client is responsible for destroying the token.
+        return ResponseEntity.ok(Map.of("message", "Logout successful"));
     }
 }
