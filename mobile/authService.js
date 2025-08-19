@@ -11,23 +11,25 @@ export const loginUser = async (email, password) => {
 // This function checks the current authentication status
 export const checkAuthStatus = async (tokenOverride) => {
   try {
-    const headers = {};
-    if (tokenOverride) {
-      // If tokenOverride already includes a scheme (e.g., 'Bearer x'), use it as-is
-      if (/\s/.test(tokenOverride)) {
-        headers.Authorization = tokenOverride;
-      } else {
-        const scheme = (await getTokenScheme()) || 'Bearer';
-        headers.Authorization = `${scheme} ${tokenOverride}`;
-      }
-    } else {
-      // Fallback: attach token from storage if available
-      const storedToken = await getToken();
-      if (storedToken) {
-        const scheme = (await getTokenScheme()) || 'Bearer';
-        headers.Authorization = `${scheme} ${storedToken}`;
-      }
+    let token = tokenOverride;
+    if (!token) {
+      token = await getToken();
     }
+
+    // If no token is available, we can assume the user is not authenticated.
+    if (!token) {
+      return null;
+    }
+
+    const headers = {};
+    // If tokenOverride already includes a scheme (e.g., 'Bearer x'), use it as-is
+    if (tokenOverride && /\s/.test(tokenOverride)) {
+      headers.Authorization = tokenOverride;
+    } else {
+      const scheme = (await getTokenScheme()) || 'Bearer';
+      headers.Authorization = `${scheme} ${token}`;
+    }
+    
     const response = await api.get('/auth/status', { headers });
     return response.data;
   } catch (error) {
